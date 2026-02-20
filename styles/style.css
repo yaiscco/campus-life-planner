@@ -1,0 +1,115 @@
+/* vangogh top image */
+.top-banner {
+  width: 100%;
+  height: 150px; /* sets how tall the border is */
+  overflow: hidden; /* crops the image so to fit page*/
+  margin: 0;
+  padding: 0;
+}
+
+.top-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+/* adjusting the body padding so the image touches the top of the page */
+body {
+  padding-top: 0; 
+}
+/* 1. base setup */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0; 
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between; /* pushes title left and picture right */
+  align-items: center;           /* keeeps them on the same level */
+  padding: 10px 20px;
+  background-color: white;       /* visually groups image, header and logo together*/
+}
+
+.header-logo {
+  height: 60px;                  /* for adjusting logo size adujusting */
+  width: auto;
+  object-fit: contain;
+}
+/* 2. for mobile layout */
+header, main, footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+/* 3. task cards (better than tables for phones) */
+section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 4. desktop layout (For bigger screens) */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* sidebar for stats, wide for tasks */
+    gap: 20px;
+  }
+}
+
+/* 5. accessibility: visible focus */
+button:focus, input:focus {
+  outline: 3px solid orange;
+}
+/* 6. table styling */
+table {
+  width: 100%;
+  border-collapse: collapse; /* makes lines between cells look neat */
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* light grey lines between rows */
+}
+
+th {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* 7. styling for delete button  */
+button {
+  background-color: #ff4d4d;
+  color: white;    
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+/* 8. make it look appealing on big screens */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto; /* centers the whole app on a big monitor */
+  }
+}

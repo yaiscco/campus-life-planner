@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Life Planner</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<a href="#add-task" class="skip-link" style="position: absolute; left: -10000px;">Skip to content</a>
+
+<div class="top-banner">
+  <img src="images/top page van gogh image.png" alt="Van Gogh Painting Banner">
+</div>
+
+<header>
+  <div class="header-content">
+    <h1>Campus Life Planner</h1>
+    <img src="images/yaiscco logo.png" alt="Yaiscco Logo" class="header-logo">
+  </div>
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#settings">Settings</a>
+  </nav>
+</header>
+
+<main>
+  <section id="dashboard" aria-labelledby="stas-title">
+    <h2 id="stats-title">My Progress</h2>
+    <div id="stats-container" role="status" aria-live="polite">
+        Total Tasks: 0 | Total Minutes: 0
+    </div>
+  </section>
+
+  <section id="add-task">
+    <h2>Add New Task</h2>
+    <form id="task-form">
+      <label for="title">Task Title:</label>
+      <input type="text" id="title" required placeholder="e.g. Math Homework recieved">
+      
+      <button type="submit" id="save-btn" style="background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 4px;">Save Task</button>
+    </form>
+  </section>
+
+  <section id="tasks">
+    <h2>All Tasks</h2>
+    <div style="margin-bottom: 15px;">
+      <label for="search-input">Search Tasks (Regex allowed):</label>
+      <input type="text" id="search-input" placeholder="Type to search...">
+    </div>
+
+    <div class="table-container">
+      <table id="task-table">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Minutes</th>
+            <th>Tag</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="task-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="settings">
+    <h2>Settings & Backup</h2>
+    <p>Save your tasks to a file or upload a backup.</p>
+    <button id="export-btn" style="background-color: #28a745; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">Download Backup (JSON)</button>
+    
+    <div style="margin-top: 15px;">
+        <label for="import-btn">Import Backup File:</label>
+        <input type="file" id="import-btn" accept=".json">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>This app helps students track school tasks.</p>
+    <p>Created by: Yai Majak D'Agoot</p>
+    <p>Email: <a href="y.dagoot@alustudent.com">y.dagoot@alustudent.com</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>Created by Yai Majak D'Agoot | <a href="https://github.com/yaiscco">GitHub</a></p>
+</footer>
+
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

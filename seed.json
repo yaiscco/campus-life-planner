@@ -1,0 +1,5 @@
+[
+  {"id":"task_1","description":"Math Homework","duration":60,"tag":"Study","date":"2025-02-21"},
+  {"id":"task_2","description":"Gym Session","duration":45,"tag":"Health","date":"2025-02-21"},
+  {"id":"task_3","description":"Library Book Return","duration":10,"tag":"Errand","date":"2025-02-22"}
+]
